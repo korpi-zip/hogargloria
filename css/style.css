@@ -1,16 +1,80 @@
+:root {
+    --color-verde-claro: #84d2a7;
+    --color-blanco: #ffffff;
+    --color-verde-oscuro: #00a847;
+    --color-cafe: #a84700;
+}
+
+@font-face {
+    font-family: 'constan';
+    src: url('/assets/tipografias/constan.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'felix';
+    src: url('/assets/tipografias/felixti.ttf') format('truetype');
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'felix', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
-header, nav, main, footer {
+header {
     padding: 20px;
+    background-color: var(--color-verde-oscuro);
+    display: flex;
 }
+
+header .titulo {
+    color: var(--color-blanco);
+    font-family: 'felix', Arial, sans-serif;
+    
+}
+header .subtitulo {
+    color: var(--color-blanco);
+    font-family: 'constan', Arial, sans-serif;
+}
+
+header .titulos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header .titulos h1 {
+    margin: 0;
+    font-size: 4em;
+}
+
+header .titulos p {
+    margin: 0;
+    font-size: 2em;
+}
+.logo {
+    background-color: var(--color-verde-oscuro);
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+
 
 nav ul {
+    
     list-style-type: none;
     padding: 0;
+}
+
+nav{
+    background-color: var(--color-verde-claro);
+    padding: 10px;
 }
 
 nav ul li {
@@ -19,10 +83,51 @@ nav ul li {
 }
 
 nav ul li a {
+    color: var(--color-blanco);
     text-decoration: none;
-    color: #000;
+}
+
+main {
+    padding: 20px;
+    background-color: var(--color-blanco);
 }
 
 section {
     margin-bottom: 20px;
+}
+
+section h2 {
+    padding: 10px;
+    color: var(--color-blanco);
+    background-color: var(--color-verde-oscuro);
+    width: 50%;
+}
+section p {
+    font-family: 'constan', Arial, sans-serif;
+    background-color: var(--color-verde-claro);
+    padding: 10px;
+    color: var(--color-blanco);
+}
+
+#servicios {
+    
+}
+
+.carrusel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px; /* Ajusta esto según tus necesidades */
+    margin: auto;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+    border: 5px solid var(--color-cafe) ;
+}
+
+.carrusel-imagenes img {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    max-height: 400px;
 }
